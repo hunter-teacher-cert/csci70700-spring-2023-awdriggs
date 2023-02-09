@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %} 
+
+{% block head %} 
+    {{ super() }}
+{% endblock %} 
+
+{% block content %}
+  <main>
+    <h1>Index</h1>
+    <div class="list">
+    <ul>
+      {%for i in range(256):%}
+      <li>
+        <a href="/ca/{{i}}">{{i}}</a>
+      </li>
+      {%endfor%}
+    </ul>
+    </li>
+    <h1 class="surprise"><a href="{{url_for('ca', number=range(0, 256)|random) }}">Random</a></h1>
+
+  </main>
+{% endblock %}
