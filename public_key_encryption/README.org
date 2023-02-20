@@ -1,14 +1,1 @@
-# Encryption HW
-
-## Part 1
-I used the frequency counts of letters to determine how many places the message has been shifted.
-
-[Link to Decoder](https://replit.com/@awdriggs/Encryption-HW#decrypt/main.py)
-
-## Part 2
-I wrote a script to encode a message using the Fence Post cipher, which is a type of transposition cipher.
-
-[Link to Encoder](https://replit.com/@awdriggs/Encryption-HW)
-
-You will need to change the path on line 6 of the `.replit` file from decrypt to encrypt for the run button to work properly.
-
+# PKE
