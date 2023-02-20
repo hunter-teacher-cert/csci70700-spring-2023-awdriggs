@@ -24,7 +24,7 @@ def get_seed(r):
  
 def automate(seed_str, sets, rules):
     row = ""
-    print(len(seed_str))
+    # print(len(seed_str))
     #loop through each letter in the place string
     for i in range(len(seed_str)):
         value = "";

@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% block title %}
+  {{num}}
+{% endblock %} 
+
+{% block head %} 
+    {{ super() }}
+{% endblock %} 
+
+{% block header%}
+<h1><a href="{{url_for('home')}}">Cellular Automata</a> - {{num}}</h1>
+<nav><a href="{{url_for('ca', number=num)}}">Standard First Row </a> | <a href="{{url_for('random_seed', number=num)}}">Random First Row</a></nav>
+{% endblock %}
+ 
+ 
+{% block content %}
+  <div class="likes-wrap">
+    {% if num|string in sesh["likes"] %}
+      <form action="{{url_for('ca', number=num)}}" method="post">
+        <input type="submit" name="submit" value="Unlike">
+      </form>
+    {% else %}
+      <form action="{{url_for('ca', number=num)}}" method="post">
+        <input type="submit" name="submit" value="Like">
+      </form>
+    {% endif %}
+
+  </div>
+  <div class="ca-wrap">
+  {% for row in board %} 
+  <div class="row">
+    {% for i in  row %}
+      <div class="cell {% if i=="1" %} on {% endif %}">
+      </div>
+    {% endfor %}
+  </div>
+ {% endfor %}
+  </div> <!-- end ca wrap -->
+
+{% endblock %}
+

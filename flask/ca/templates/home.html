@@ -12,7 +12,7 @@
     <ul>
       {%for i in range(256):%}
       <li>
-        <a href="/ca/{{i}}">{{i}}</a>
+        <a class="{{'liked' if i|string in sesh["likes"]}}" href="/ca/{{i}}">{{i}}</a>
       </li>
       {%endfor%}
     </ul>

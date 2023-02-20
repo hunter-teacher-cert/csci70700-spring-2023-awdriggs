@@ -9,19 +9,23 @@ h1 {
 
 header {
   /* border: 1px solid black; */
-  background-color: rgba(57, 255, 20, 0.5);
+  background-color: rgba(57, 255, 20);
   padding: 20px;
   position: fixed;
   left: 20px;
   top: 20px;
-  color: white;
+  color: #000;
   width: 335px;
   height: 100px;
 }
 
-header h1, header a {
-    color: white;
+header nav {
+  font-size: 20px;
 }
+
+/* header h1, header a { */
+/*   color: white; */
+/* } */
 
 .list ul {
   display: flex;
@@ -41,7 +45,7 @@ a{
 }
 
 a:hover{
-  color: #39ff14;
+  color: #A020F0;
 }
 #content {
   margin-top: 180px;
@@ -64,7 +68,7 @@ a:hover{
   margin: -2px;
   display: inline-block;
   width: 20px;
-  height: 20px; 
+  height: 20px;
 
   /* height: var(--size); */
   background-color: #fff;
@@ -74,4 +78,24 @@ a:hover{
   background-color: #000;
 }
 
+.likes-wrap{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
 
+.likes-wrap form input{
+  background-color: #39ff14;
+  border: 0;
+  font-size: 30px;
+  width: 110px;
+  padding: 10px;
+}
+
+.likes-wrap form input:hover {
+  background-color: #A020F0;
+}
+
+.liked {
+  color: #39ff14;
+}
