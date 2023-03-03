@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- creating a group of objects for the rocket, so when i rotate and position they stay relative to each other -->
+      <a-entity position="0 0 -7" rotation="0 0 -45" color="#BADA55">
+        <!-- position the cone on top of the cylinder -->
+        <a-cone position="0 2.5 0" radius-bottom="0.5" height="1" radius-top="0.001" metalness="1" color="#FF0000"></a-cone>
+        <a-cylinder position="0 0 0" radius="0.5" height="4" color="#FFF" metalness="1"></a-cylinder>
+        <!-- using cones for the fins, using scall to squash them into fin blades -->
+        <a-cone position="0 -1 0" scale="0.1 1 1" radius-bottom="1" height="2" radius-top="0.5" metalness="1" color="#FF0000"></a-cone>
+        <!-- rotating one set of fins 90 degrees -->
+        <a-cone position="0 -1 0" rotation="0 90 0" scale="0.1 1 1" radius-bottom="1" height="2" radius-top="0.5" metalness="1" color="#FF0000"></a-cone>
+      </a-entity>
+      
+      <!-- using an image for the sky -->
+      <a-assets>
+        <img id="sky" src="sky.png">
+      </a-assets>
+      <a-sky src="#sky"></a-sky> 
+    </a-scene>
+  </body>
+</html>
